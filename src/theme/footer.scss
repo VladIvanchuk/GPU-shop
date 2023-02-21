@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  height: 10rem;
+  @include flex-justify(sa);
+  flex-direction: column;
+  padding: 1.5rem 7rem;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+  font-family: "Roboto", sans-serif;
+}
+.footer-texts {
+  @include flex-justify(sa);
+  span {
+    i {
+      color: grey;
+    }
+  }
+}
+.copyright {
+  text-align: center;
+}

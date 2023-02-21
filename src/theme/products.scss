@@ -1,0 +1,142 @@
+.products-wrapper {
+  padding: 0 2rem;
+  @include flex-justify(sb);
+  width: 100%;
+}
+.sort {
+  height: 4rem;
+  margin: 0.1rem 0 0.5rem 0;
+  .sort-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .search {
+      float: right;
+      background-color: $transp;
+      border-radius: $rad;
+      width: auto;
+      input,
+      svg {
+        color: #fff;
+      }
+      input {
+        width: 30rem;
+        margin-right: 2rem;
+      }
+    }
+    .select {
+      padding: 0 1rem;
+      width: 12rem;
+      color: #fff;
+      background-color: $transp;
+      border-radius: $rad;
+      border: 2px solid #fff;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+      svg {
+        color: $light;
+      }
+    }
+  }
+}
+.grid {
+  width: 100%;
+  padding-left: 1rem;
+}
+.results {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  h3 {
+    font-family: "Roboto", sans-serif;
+  }
+  button {
+    margin: 0.3rem 0.5rem;
+    padding: 0.2rem 1rem;
+    background-color: $purpure;
+    color: white;
+  }
+}
+.filter {
+  width: 20rem;
+  background-color: $transp;
+  border-radius: $rad;
+  padding: 1.5rem;
+  .filter-block {
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    background: none;
+    color: #fff;
+    box-shadow: none;
+    &::before {
+      background-color: #fff;
+    }
+    svg {
+      color: #fff;
+    }
+    button {
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 0.2rem;
+    }
+  }
+  .filter-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  justify-items: center;
+}
+
+.product {
+  background-color: $transp;
+  border-radius: $rad;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  .img {
+    border-radius: $rad;
+    background-color: $purpure;
+    width: 100%;
+    height: 12rem;
+  }
+  .name {
+    margin: 1rem 0;
+  }
+  .price {
+    margin: 1rem 0;
+  }
+  span {
+    margin-right: 1rem;
+    &.price-current {
+      font-size: 1.5rem;
+    }
+    &.sale {
+      font-size: 1.1rem;
+      color: grey;
+      text-decoration: line-through;
+    }
+  }
+  .buttons {
+    @include flex-justify(sb);
+    margin: 1rem 0 0.5rem 0;
+  }
+  button {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: none;
+    color: #fff;
+    border: 2px solid $purpure;
+    cursor: pointer;
+  }
+}

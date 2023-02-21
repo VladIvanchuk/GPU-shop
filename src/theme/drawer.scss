@@ -1,0 +1,131 @@
+.drawer {
+  padding: 1.5rem;
+  width: 40rem;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  .drawer-header {
+    @include flex-justify(sb);
+    svg {
+      color: #fff;
+      font-size: 2rem;
+      transition: 0.2s;
+
+      &:hover {
+        transition: 0.2s;
+        color: $bright;
+      }
+    }
+    button {
+      min-width: auto;
+      padding: 0;
+    }
+  }
+  .drawer-body {
+    padding: 1rem 0;
+  }
+  .drawer-item {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 rgba(220, 48, 151, 65%);
+    background-image: linear-gradient(
+      to right top,
+      rgba(245, 89, 69, 0.2) 0,
+      rgba(44, 70, 142, 0.8) 41%,
+      rgba(37, 46, 126, 0.5) 100%
+    );
+    transition: 0.2s;
+    border: 2px solid $purpure;
+    border-radius: $rad;
+    &:hover {
+      transform: scale(1.025);
+      transition: 0.2s;
+    }
+    .img {
+      flex-shrink: 0;
+      border-radius: $rad;
+      background-color: $purpure;
+      width: 10rem;
+      height: 7rem;
+      margin-right: 1rem;
+    }
+    .info {
+      @include flex-justify(sb);
+      flex-direction: column;
+    }
+    .top {
+      display: flex;
+    }
+    .bottom {
+      @include flex-justify(sb);
+      .remove {
+        padding: 0.3rem 1rem;
+        color: #fff;
+        border: 2px solid $purpure;
+        &:hover {
+          background-color: $bright;
+        }
+      }
+    }
+    .qty-box {
+      border: 1px solid $purpure;
+      border-radius: 5px;
+      background-color: $dark;
+      @include flex-center(y);
+      button {
+        height: 100%;
+        color: #fff;
+        padding: 0 0.5rem;
+        min-width: auto;
+      }
+      .qty {
+        text-align: center;
+        padding: 0 1rem;
+      }
+    }
+    .goods-title {
+      font-size: 1rem;
+      margin-right: 1rem;
+    }
+    .current {
+      color: $lighter;
+      font-size: 1.2rem;
+    }
+    .sale {
+      text-align-last: right;
+      text-decoration: line-through;
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+  }
+  .drawer-footer {
+    position: absolute;
+    box-shadow: 0 5px 14px rgb(0 0 0);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 1.5rem;
+    .price {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      @include flex-justify(sb);
+      p {
+        font-size: 0.9rem;
+        color: $purpure;
+      }
+    }
+  }
+  .cta {
+    width: 100%;
+    a {
+      padding: 0.5rem 0;
+      margin: 0;
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
