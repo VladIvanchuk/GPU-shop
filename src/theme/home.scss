@@ -22,6 +22,7 @@
     background-size: auto 90%;
     background-repeat: no-repeat;
     background-position-y: center;
+    margin-top: -2rem;
   }
   img {
     position: absolute;
@@ -47,7 +48,7 @@
       backdrop-filter: blur(7px);
       height: 100%;
       width: 100%;
-      padding: 3rem 1rem;
+      padding: 5rem 1rem;
     }
   }
   h1 {
@@ -298,7 +299,7 @@
   .text {
     width: 45%;
     margin-top: -1rem;
-    z-index: 2;
+    z-index: 3;
     @include laptop {
       text-align: center;
       width: 100%;

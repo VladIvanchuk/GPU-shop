@@ -13,6 +13,9 @@ header {
   @include mobile-m {
     margin: 0 0.4rem 4rem 0.4rem;
   }
+  @include mobile-s {
+    margin: 0 0.4rem 2rem 0.4rem;
+  }
 }
 .logo {
   font-size: 1.35rem;
