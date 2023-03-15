@@ -16,7 +16,10 @@
   .form-control {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
+    @include mobile-s {
+      justify-content: space-between;
+    }
   }
   .filter-button {
     display: none;
@@ -48,6 +51,15 @@
       @include mobile-l {
         width: 100%;
       }
+      @include mobile-m {
+        display: flex;
+      }
+      .search-input {
+        @include mobile-m {
+          width: 100%;
+          padding-right: 2rem;
+        }
+      }
       input,
       svg {
         color: #fff;
@@ -64,6 +76,9 @@
         @include mobile-m {
           width: 100%;
           margin-right: 0;
+        }
+        @include mobile-s {
+          width: 100%;
         }
       }
     }

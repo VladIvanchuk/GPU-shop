@@ -36,6 +36,7 @@ export const ProductsPage = () => {
                   <SearchIcon />
                 </IconButton>
                 <InputBase
+                className="search-input"
                   placeholder="Search"
                   inputProps={{ "aria-label": "search google maps" }}
                 />
