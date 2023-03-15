@@ -15,8 +15,11 @@ body {
   font-family: "Orbitron", sans-serif;
 }
 .wrapper {
-  width: 85rem;
+  width: 90vw;
   margin: 0 auto;
+  @include mobile-m {
+    width: 100%;
+  }
 }
 a {
   color: $light;
@@ -38,6 +41,9 @@ a {
 }
 .cta {
   width: 18rem;
+  @include laptop {
+    width: 15rem;
+  }
   a {
     padding: 0.8rem 3rem;
     position: relative;
@@ -75,6 +81,9 @@ a {
       margin: 0 auto;
       color: #fff;
       text-shadow: none;
+      @include laptop {
+        font-size: 1.2rem;
+      }
     }
   }
 }

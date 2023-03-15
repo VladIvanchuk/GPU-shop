@@ -26,9 +26,36 @@ export const Home = () => {
       <div className="new-goods">
         <h3>NEW SERIES!</h3>
         <div className="new-container">
-          <NewProduct />
-          <NewProduct />
-          <NewProduct />
+          <Swiper
+            spaceBetween={22}
+            modules={[Autoplay, Pagination]}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              1200: {
+                slidesPerView: 3,
+              },
+              830: {
+                slidesPerView: 2,
+              },
+              700: {
+                slidesPerView: 1,
+              },
+            }}
+            autoplay={{
+              delay: 2300,
+              disableOnInteraction: false,
+            }}
+          >
+            <SwiperSlide>
+              <NewProduct />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewProduct />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewProduct />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className="explore">
@@ -54,9 +81,19 @@ export const Home = () => {
         <div className="hot-goods-container">
           <Swiper
             spaceBetween={22}
-            slidesPerView={4}
             modules={[Autoplay, Pagination]}
             pagination={{ clickable: true }}
+            breakpoints={{
+              1400: {
+                slidesPerView: 4,
+              },
+              1060: {
+                slidesPerView: 3,
+              },
+              700: {
+                slidesPerView: 2,
+              },
+            }}
             autoplay={{
               delay: 2300,
               disableOnInteraction: false,

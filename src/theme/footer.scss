@@ -7,6 +7,10 @@ footer {
   font-size: 0.9rem;
   margin-top: 7rem;
   font-family: "Roboto", sans-serif;
+  @include mobile-m {
+    padding: 1.5rem 2rem;
+    margin-top: 3rem;
+  }
 }
 .footer-texts {
   @include flex-justify(sa);

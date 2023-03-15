@@ -1,6 +1,6 @@
 export const HotProduct = () => {
   return (
-    <a href="" className="hot-goods-item">
+    <a href="/" className="hot-goods-item">
       <div className="hot-goods-img">
         <div className="img">
           <img

@@ -11,15 +11,32 @@
   position: relative;
   padding: 0 2rem;
   height: 100vh;
+  overflow: hidden;
+  @include pc {
+    padding: 0;
+  }
+  @include mobile-m {
+    padding: 0 2rem;
+  }
   img {
     position: absolute;
     right: 2rem;
     top: -1.5rem;
     height: 82vh;
+    @include pc {
+      right: 0;
+    }
+    @include mobile-m {
+      left: -1rem;
+    }
   }
   .text {
     position: relative;
     top: 8rem;
+    z-index: 2;
+    @include mobile-m {
+      top: 1rem;
+    }
   }
   h1 {
     font-size: 4rem;
@@ -27,6 +44,7 @@
   }
   h2 {
     font-size: 2.5rem;
+    font-size: 2rem;
   }
   span {
     color: $bright;
@@ -57,8 +75,10 @@
   }
 }
 .new-container {
-  @include flex-justify(se);
-  padding: 5rem 5rem 3rem 5rem;
+  padding: 5rem 2rem 1rem 2rem;
+  @include pc {
+    padding: 5rem 1rem 1rem 1rem;
+  }
 }
 .new-goods-item {
   position: relative;
@@ -71,6 +91,11 @@
   flex-direction: column;
   color: $light;
   transition: 0.3s;
+  margin: 0.5rem auto 0.5rem auto;
+  @include pc {
+    margin: 0.5rem auto 3rem auto;
+  }
+
   &:hover {
     color: $light;
     transform: scale(1.03);
@@ -101,11 +126,18 @@
     background-image: linear-gradient(180deg, $transp 0%, rgba(255, 255, 255, 0) 70%);
     border-radius: 50%;
     @include flex-center(x);
+    @include laptop {
+      width: 10rem;
+      height: 10rem;
+    }
     img {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       width: 15rem;
+      @include laptop {
+        width: 13rem;
+      }
     }
   }
 }
@@ -139,6 +171,9 @@
       transform: scale(1.03);
       transition: 0.2s;
       background-color: $bright;
+    }
+    @include mobile-s {
+      margin: 1rem auto 5rem auto;
     }
     .hot-goods-img {
       width: 100%;
@@ -204,6 +239,9 @@
 }
 .explore {
   height: 80vh;
+  @include laptop {
+    height: auto;
+  }
   @include flex-full-center;
   margin: 0 2rem 10rem 2rem;
   position: relative;
@@ -217,12 +255,36 @@
     left: 2px;
     top: 7%;
     z-index: -1;
+    @include laptop {
+      width: 80%;
+      left: 50%;
+      top: 3%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
   }
   .text {
     width: 45%;
     margin-top: -1rem;
+    z-index: 2;
+    @include laptop {
+      text-align: center;
+      width: 100%;
+      @include background-blur;
+      border-radius: 15px;
+      padding: 10rem 3rem;
+    }
+    @include tablet {
+      padding: 5rem 3rem;
+    }
+    @include mobile-s {
+      padding: 5rem 1rem;
+    }
     h2 {
       font-size: 3rem;
+      @include mobile-s {
+        font-size: 2.5rem;
+      }
     }
     span {
       color: $bright;
@@ -236,10 +298,24 @@
       width: 60%;
       font-size: 1.1rem;
       margin: 2rem 0 3rem 0;
+      @include laptop {
+        margin: 2rem 0;
+        padding: 0 5rem;
+        width: 100%;
+      }
+      @include mobile-s {
+        padding: 0 2rem;
+      }
     }
     .cta {
+      @include laptop {
+        margin: 0 auto;
+      }
       a {
         margin: 1.5rem;
+        @include laptop {
+          margin: 0;
+        }
         span {
           color: #fff;
         }
@@ -248,6 +324,13 @@
   }
   .img {
     width: 55%;
+    @include laptop {
+      position: absolute;
+      width: 80%;
+    }
+    @include tablet {
+      width: 90%;
+    }
     img {
       width: 100%;
     }
