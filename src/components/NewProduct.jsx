@@ -1,6 +1,6 @@
 export const NewProduct = () => {
   return (
-    <a href="" className="new-goods-item new">
+    <>
       <div className="goods-img">
         <div className="img">
           <img
@@ -17,6 +17,6 @@ export const NewProduct = () => {
           <div className="sale">$1,709.99</div>
         </div>
       </div>
-    </a>
+    </>
   );
 };

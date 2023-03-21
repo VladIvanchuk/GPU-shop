@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const Product = () => {
   return (
-    <div className="product">
+    <>
       <div className="img"></div>
       <div className="name">
         GIGABYTE GAMING OC GeForce RTX 4080 16GB GDDR6X PCI Express 4.0...
@@ -13,6 +15,6 @@ export const Product = () => {
         <button>Add to cart</button>
         <button>Buy now!</button>
       </div>
-    </div>
+    </>
   );
 };

@@ -1,5 +1,6 @@
 import { Product, Filter } from "../components";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import {
   InputBase,
@@ -21,6 +22,8 @@ export const ProductsPage = () => {
     setAge(event.target.value);
   };
 
+  const products = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
   return (
     <div className="products-wrapper">
       <Filter active={isFilterOpen} setActive={setFilterOpen} />
@@ -36,7 +39,7 @@ export const ProductsPage = () => {
                   <SearchIcon />
                 </IconButton>
                 <InputBase
-                className="search-input"
+                  className="search-input"
                   placeholder="Search"
                   inputProps={{ "aria-label": "search google maps" }}
                 />
@@ -59,13 +62,11 @@ export const ProductsPage = () => {
           <Button variant="contained">16 GB</Button>
         </div>
         <div className="products">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {products.map((product) => (
+            <Link className="product" to={`/details/${product}`} key={product}>
+              <Product />
+            </Link>
+          ))}
         </div>
       </div>
     </div>

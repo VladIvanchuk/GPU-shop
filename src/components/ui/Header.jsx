@@ -4,7 +4,7 @@ import { IconButton, Badge } from "@material-ui/core";
 
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 
-import { Cart } from "./";
+import { Cart } from "..";
 
 export const Header = () => {
   const [state, setState] = useState(false);

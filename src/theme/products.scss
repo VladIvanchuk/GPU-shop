@@ -157,6 +157,7 @@
   background-color: $transp;
   border-radius: $rad;
   padding: 1.5rem;
+  min-height: 100%;
   @include pc {
     width: 18rem;
   }
@@ -180,7 +181,7 @@
       backdrop-filter: blur(10px);
       overflow-y: scroll;
 
-      transition: 0.2s;
+      transition: 0.4s ease-in;
       @include mobile-m {
         width: 70%;
       }
@@ -231,10 +232,25 @@
 }
 
 .product {
+  display: block;
+  color: #fff !important;
+  text-decoration: none !important;
+  cursor: pointer;
   background-color: $transp;
   border-radius: $rad;
   padding: 1rem;
   font-family: "Roboto", sans-serif;
+  transition: 0.2s;
+  border: 2px solid $transp;
+
+  &:hover {
+    transition: 0.2s;
+    border: 2px solid $purpure;
+    .name {
+      margin: 1rem 0;
+      text-decoration: underline;
+    }
+  }
   .img {
     border-radius: $rad;
     background-color: $purpure;
@@ -243,20 +259,13 @@
   }
   .name {
     margin: 1rem 0;
+    height: 4rem;
   }
   .price {
     margin: 1rem 0;
   }
   span {
     margin-right: 1rem;
-    &.price-current {
-      font-size: 1.5rem;
-    }
-    &.sale {
-      font-size: 1.1rem;
-      color: grey;
-      text-decoration: line-through;
-    }
   }
   .buttons {
     @include flex-justify(sb);
@@ -270,5 +279,8 @@
     color: #fff;
     border: 2px solid $purpure;
     cursor: pointer;
+    &:hover {
+      background-color: $purpure;
+    }
   }
 }

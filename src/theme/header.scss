@@ -12,9 +12,11 @@ header {
   @include background-blur;
   @include mobile-m {
     margin: 0 0.4rem 4rem 0.4rem;
+    padding: 0 1.2rem;
   }
   @include mobile-s {
     margin: 0 0.4rem 2rem 0.4rem;
+    top: 0.5rem;
   }
 }
 .logo {

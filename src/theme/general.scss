@@ -99,3 +99,11 @@ a {
   background: $bright;
   border-radius: 5rem;
 }
+.price-current {
+  font-size: 1.5rem;
+}
+.sale {
+  font-size: 1.1rem;
+  color: grey;
+  text-decoration: line-through;
+}

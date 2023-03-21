@@ -2,10 +2,12 @@ import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 
 import CloseIcon from "@material-ui/icons/Close";
-import { ButtonLink } from "./ui/ButtonLink";
+import { ButtonLink } from "./ButtonLink";
 import { Button, SwipeableDrawer } from "@material-ui/core";
+import { useState } from "react";
 
 export const Cart = ({ state, setState }) => {
+  const [count, setCount] = useState(1);
   return (
     <SwipeableDrawer
       anchor="right"
@@ -35,11 +37,11 @@ export const Cart = ({ state, setState }) => {
               </div>
               <div className="bottom">
                 <div className="qty-box">
-                  <Button>
+                  <Button onClick={() => count > 0 && setCount(count - 1)}>
                     <RemoveIcon />
                   </Button>
-                  <span className="qty">1</span>
-                  <Button>
+                  <span className="qty">{count}</span>
+                  <Button onClick={() => setCount(count + 1)}>
                     <AddIcon />
                   </Button>
                 </div>
